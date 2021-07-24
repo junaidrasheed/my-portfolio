@@ -23,30 +23,6 @@
   <!-- <div class="md:flex h-full">
     <ProfileCard class="w-full max-w-sm md:shadow-2xl"/>
     <div class="w-full md:w-3/4 bg-white my-8 rounded md:rounded-l-none md:rounded-r overflow-y-auto">
-      <div id="about">
-        <Heading title="About Me"/>
-        <div class="md:flex space-y-4 md:space-x-24 py-12 px-8">
-          <div class="w-full md:w-1/2">
-            <p>Hi, I'm a {{ age }} years old professional software developer with hands on experience of working effectively in dynamic environments. Offering {{ experience }}+ years of experience
-              in web development technologies, I am an efficient team player focused on achieving project objectives with speed and accuracy.
-            </p>
-          </div>
-          <div class="flex flex-col space-y-4 w-full md:w-1/2">
-            <div class="flex justify-between">
-              <span class="block tag">Age......</span>
-              <span class="block">{{ age }}</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="block tag">Country......</span>
-              <span class="block">Pakistan</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="block tag">Remote Work......</span>
-              <span class="block">Available</span>
-            </div>
-          </div>
-        </div>
-      </div>
       <div>
         <Heading title="Main Domains"/>
         <div class="md:flex space-y-8 md:space-y-0 md:space-x-24 py-12 px-8">

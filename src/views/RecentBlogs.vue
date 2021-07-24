@@ -1,5 +1,5 @@
 <template>
-  <section-container background="white">
+  <section-container background="gray">
     <heading size="lg">Recent Blogs.</heading>
     <div></div>
   </section-container>

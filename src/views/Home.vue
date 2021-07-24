@@ -1,5 +1,5 @@
 <template>
-  <div class="profile-bg">
+  <div class="parallax-bg profile-bg-img">
     <div class="bg-opacity-80 bg-gray-900 h-full text-white">
       <div class="flex flex-col justify-center items-center h-full">
         <p class="text-6xl font-bold">{{ name }}</p>
