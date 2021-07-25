@@ -7,7 +7,7 @@
     <skills />
     <recent-work />
     <hobbies />
-    <recent-blogs />
+    <!-- <recent-blogs /> -->
     <contact />
     <page-footer />
   </div>
@@ -20,7 +20,7 @@ import Expertise from "./views/Expertise.vue";
 import Skills from "./views/Skills.vue";
 import RecentWork from "./views/RecentWork.vue";
 import Hobbies from "./views/Hobbies.vue";
-import RecentBlogs from "./views/RecentBlogs.vue";
+// import RecentBlogs from "./views/RecentBlogs.vue";
 import Contact from "./views/Contact.vue";
 import PageFooter from "./views/Footer.vue";
 export default {
@@ -32,7 +32,7 @@ export default {
     Skills,
     RecentWork,
     Hobbies,
-    RecentBlogs,
+    // RecentBlogs,
     Contact,
     PageFooter,
   },

@@ -1,7 +1,7 @@
 <template>
   <section-container background="black" class="text-gray-100">
     <heading size="lg">My Key Skills.</heading>
-    <div class="flex flex-wrap overflow-hidden px-24 justify-center">
+    <div class="md:flex md:flex-wrap overflow-hidden md:px-24 justify-center">
       <div
         class="my-4 px-12 w-full overflow-hidden md:w-1/3 text-left"
         v-for="(skill, idx) in skills"

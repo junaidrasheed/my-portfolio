@@ -2,7 +2,7 @@
   <section-container background="gray">
     <heading size="lg">My Recent Works.</heading>
     <div class="">
-      <div class="flex justify-center space-x-8">
+      <div class="flex justify-center space-x-8 px-4">
         <button
           v-for="(category, idx) in categories"
           :key="idx"
@@ -17,7 +17,7 @@
           {{ category }}
         </button>
       </div>
-      <div class="mx-auto max-w-7xl">
+      <div class="w-full mx-auto md:max-w-7xl">
         <div class="flex flex-wrap -mx-4 overflow-hidden">
           <div
             v-for="(project, idx) in filteredProjects"
@@ -57,10 +57,16 @@
         </div>
       </div>
     </div>
+    <project-modal
+      :project="selectedProject"
+      :show="showModal"
+      @close="reset()"
+    ></project-modal>
   </section-container>
 </template>
 <script>
 import SectionContainer from "../components/SectionContainer.vue";
+import ProjectModal from "../components/ProjectModal.vue";
 import Heading from "../components/Heading.vue";
 import CointelegraphLogo from "../assets/projects/ct-pro-dark.png";
 import TheTieLogo from "../assets/projects/the_tie.svg";
@@ -69,6 +75,7 @@ import HBILogo from "../assets/projects/hbi.png";
 export default {
   components: {
     SectionContainer,
+    ProjectModal,
     Heading,
   },
   data() {
@@ -132,6 +139,12 @@ export default {
       } else {
         return this.projects.filter((x) => x.type == this.selectedCategory);
       }
+    },
+  },
+  methods: {
+    reset() {
+      this.selectedProject = {};
+      this.showModal = false;
     },
   },
 };

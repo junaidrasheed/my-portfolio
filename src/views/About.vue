@@ -16,7 +16,7 @@
         v-for="(social, idx) in socials"
         :key="idx"
       >
-        <img :src="social.icon" class="w-5 h-5 inline" />
+        <img :src="getIcon(social.icon)" class="w-5 h-5 inline" />
       </a>
     </div>
   </section-container>
@@ -30,38 +30,6 @@
             <div class="flex items-center justify-center mx-auto rounded-full bg-red-500 w-20 h-20" v-html="domain.icon"></div>
             <h1 class="my-4 text-xl">{{ domain.title }}</h1>
             <p>{{ domain.description }}</p>
-          </div>
-        </div>
-      </div>
-      <div id="skill">
-        <Heading title="Skills, Tools & Interests"/>
-        <div class="md:flex space-y-8 md:space-y-0 md:space-x-24 py-12 px-8">
-          <div class="w-full md:w-1/2">
-            <div class="space-y-2">
-              <div class="flex justify-between" v-for="(skill,idx) in skills" :key="idx">
-                <div>{{ skill.name }}</div>
-                <div class="flex space-x-2">
-                  <div v-for="i in skill.value" :key="'filled-'+i" class="w-5 h-5 rounded-full bg-red-500"></div>
-                  <div v-for="i in (5-skill.value)" :key="'unfilled-'+i" class="w-5 h-5 rounded-full bg-gray-900"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2">
-            <div>
-              <h1 class="text-xl">Tools</h1>
-              <div class="flex my-4">
-
-              </div>
-            </div>
-            <div>
-              <h1 class="text-xl">Interests</h1>
-              <div class="flex flex-wrap -mx-1 mt-2 overflow-hidden">
-                <div v-for="(interest, idx) in interests" :key="idx" class="px-1 overflow-hidden">
-                  <span class="tag">{{ interest }}</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -82,18 +50,10 @@
   </div> -->
 </template>
 <script>
-// import ProfileCard from "../components/ProfileCard";
 import SectionContainer from "../components/SectionContainer.vue";
 import Heading from "../components/Heading.vue";
-import Facebook from "../assets/icons/facebook.png";
-import Github from "../assets/icons/github.png";
-import Instagram from "../assets/icons/instagram.png";
-import LinkedIn from "../assets/icons/linkedin.png";
-import Twitter from "../assets/icons/twitter.png";
-
 export default {
   components: {
-    // ProfileCard,
     SectionContainer,
     Heading,
   },
@@ -111,21 +71,19 @@ export default {
   data() {
     return {
       socials: [
-        { icon: Github, link: "#" },
-        { icon: LinkedIn, link: "#" },
-        { icon: Instagram, link: "#" },
-        { icon: Twitter, link: "#" },
-        { icon: Facebook, link: "#" },
+        { icon: "github.png", link: "#" },
+        { icon: "linkedin.png", link: "#" },
+        { icon: "instagram.png", link: "#" },
+        { icon: "twitter.png", link: "#" },
+        { icon: "facebook.png", link: "#" },
       ],
       tools: ["vscode", "github", "dbeaver"],
-      interests: [
-        "Computer Gaming",
-        "Drawing",
-        "Hiking",
-        "Netflix",
-        "Travelling",
-      ],
     };
+  },
+  methods: {
+    getIcon(name) {
+      return require("@/assets/icons/" + name);
+    },
   },
 };
 </script>

@@ -1,5 +1,4 @@
-<template>
-  <svg
+<svg
     height="512"
     viewBox="0 0 64 64"
     width="512"
@@ -37,4 +36,3 @@
       <path d="m32 26v2a5.006 5.006 0 0 1 5 5h2a7.008 7.008 0 0 0 -7-7z" />
     </g>
   </svg>
-</template>

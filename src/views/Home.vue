@@ -2,7 +2,9 @@
   <div class="parallax-bg profile-bg-img">
     <div class="bg-opacity-80 bg-gray-900 h-full text-white">
       <div class="flex flex-col justify-center items-center h-full">
-        <p class="text-6xl font-bold">{{ name }}</p>
+        <p class="text-4xl px-2 text-center md:text-6xl font-bold">
+          {{ name }}
+        </p>
         <p class="text-lg" v-html="designation"></p>
       </div>
       <div class="text-center -mt-20">
