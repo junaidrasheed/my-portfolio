@@ -12,7 +12,7 @@
             class="items-end text-gray-100"
           >
             <img
-              :src="getIcon(contact.icon)"
+              :src="getImageURL(contact.icon)"
               :class="[contact.size, 'mx-auto']"
             />
             <span class="font-thin mt-2">{{ contact.value }}</span>
@@ -61,17 +61,17 @@ export default {
     return {
       contacts: [
         {
-          icon: "map.svg",
+          icon: "icons/map.svg",
           size: "w-10 h-10",
           value: "Lahore, Pakistan",
         },
         {
-          icon: "phone.svg",
+          icon: "icons/phone.svg",
           size: "w-8 h-8",
           value: "+923054380652",
         },
         {
-          icon: "mail.svg",
+          icon: "icons/mail.svg",
           size: "w-10 h-10",
           value: "junaidrasheed1@gmail.com",
         },
@@ -80,11 +80,6 @@ export default {
       email: "",
       message: "",
     };
-  },
-  methods: {
-    getIcon(name) {
-      return require("@/assets/icons/" + name);
-    },
-  },
+  }
 };
 </script>

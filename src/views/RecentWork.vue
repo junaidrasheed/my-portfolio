@@ -24,11 +24,11 @@
             :key="idx"
             class="my-4 px-4 w-full overflow-hidden md:w-1/4"
           >
-            <div class="h-64 bg-white shadow relative">
+            <div class="h-64 shadow relative" :class="[project.background]">
               <div
                 class="flex items-center justify-center p-4 absolute inset-0 z-0"
               >
-                <img :src="project.image" />
+                <img :src="getImageURL(project.image)" />
               </div>
               <div
                 class="opacity-0 hover:opacity-100 bg-gray-900 bg-opacity-95 duration-300 absolute inset-0 z-10 flex justify-center items-center text-6xl text-white font-semibold"
@@ -41,10 +41,7 @@
                     {{ project.shortDescription }}
                   </p>
                   <button
-                    @click="
-                      selectedProject = project;
-                      showModal = true;
-                    "
+                    @click="selectedProject = project;showModal = true;"
                     title="See Details"
                     class="rounded text-sm px-2 py-px font-semibold bg-white text-gray-900 hover:bg-gray-100 outline-none focus:outline-none"
                   >
@@ -68,10 +65,6 @@
 import SectionContainer from "../components/SectionContainer.vue";
 import ProjectModal from "../components/ProjectModal.vue";
 import Heading from "../components/Heading.vue";
-import CointelegraphLogo from "../assets/projects/ct-pro-dark.png";
-import TheTieLogo from "../assets/projects/the_tie.svg";
-import SigDevLogo from "../assets/projects/sigdev.svg";
-import HBILogo from "../assets/projects/hbi.png";
 export default {
   components: {
     SectionContainer,
@@ -87,7 +80,8 @@ export default {
       projects: [
         {
           title: "Cointelegraph Markets Pro",
-          image: CointelegraphLogo,
+          image: 'projects/ct-pro.png',
+          background: 'bg-gray-800',
           shortDescription:
             "A simple and easy-to-use dashboard powered by the same technology and data used by the leading institutional investors",
           longDescription: "",
@@ -97,19 +91,9 @@ export default {
           reponsibilities: [],
         },
         {
-          title: "TheTIE Vision",
-          image: TheTieLogo,
-          shortDescription:
-            "Leading information services provider for digital assets. We help businesses in the cryptocurrency industry act on market-moving information.",
-          longDescription: "",
-          tools: [],
-          link: "",
-          type: "Professional",
-          reponsibilities: [],
-        },
-        {
           title: "TheTIE SigDev Terminal",
-          image: SigDevLogo,
+          image: 'projects/sigdev.svg',
+          background: 'bg-white',
           shortDescription:
             "SigDev parsing through thousands of primary sources around the globe to help identify the news that matters, faster than anyone in crypto space.",
           longDescription: "",
@@ -119,8 +103,45 @@ export default {
           reponsibilities: [],
         },
         {
+          title: "TheTIE Vision",
+          image: 'projects/the_tie.svg',
+          background: 'bg-white',
+          shortDescription:
+            "Leading information services provider for digital assets. We help businesses in the cryptocurrency industry act on market-moving information.",
+          longDescription: "",
+          tools: [],
+          link: "",
+          type: "Professional",
+          reponsibilities: [],
+        },
+        {
+          title: "Altcoin Alert",
+          image: 'projects/altcoin_alert.png',
+          background: 'bg-blueGray-900',
+          shortDescription:
+            "Private software developed for top hedge funds now available to the general public for the first time.",
+          longDescription: "",
+          tools: [],
+          link: "",
+          type: "Professional",
+          reponsibilities: [],
+        },
+        {
+          title: "Trade The Chain",
+          image: 'projects/ttc.png',
+          background: 'bg-green-400',
+          shortDescription:
+            "AI-driven sentiment indicators and actionable alerts to help you beat the market.",
+          longDescription: "",
+          tools: [],
+          link: "",
+          type: "Professional",
+          reponsibilities: [],
+        },
+        {
           title: "Healthcare Business Insights",
-          image: HBILogo,
+          image: 'projects/hbi.png',
+          background: 'bg-gray-400',
           shortDescription:
             "Providing healthcare insights that change lives. Helping healthcare professionals optimize performance, engage and retain employees, and understand the market.",
           longDescription: "",

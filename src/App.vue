@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="h-full">
+    <portal-target name="app"></portal-target>
     <navigation />
     <home />
     <about />
@@ -35,7 +36,7 @@ export default {
     // RecentBlogs,
     Contact,
     PageFooter,
-  },
+  }
 };
 </script>
 <style src="./assets/tailwind.css"></style>
